@@ -19,14 +19,15 @@ def consolidate_cart(cart)
     combined_cart << cart[counter]
     counter += 1 
   end
-  counter = 0
   combined_cart = combined_cart.uniq
+  counter = 0
   while counter < combined_cart.length do
     combined_cart[counter][:count] = cart.count(combined_cart[counter])
     counter += 1 
   end
   combined_cart
 end
+  
   
   # Consult README for inputs and outputs
   #
